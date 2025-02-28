@@ -1,0 +1,52 @@
+body{
+    font-family: 'PT Serif', serif;
+}
+.pt-serif-regular {
+    font-family: "PT Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .pt-serif-bold {
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .pt-serif-regular-italic {
+    font-family: "PT Serif", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+.bcg-yellow{
+    background-color: #FFC017;
+}
+
+.border-bottom-dark{
+    border-bottom: 1px solid rgba(41,41,41,1);
+}
+
+.li_hover:hover{
+  text-decoration: underline;
+  color: black;
+  cursor: pointer;
+  transition: color 0.5s, text-decoration 0.5s;
+
+
+}
+.art_hvr:hover{
+  shape-image-threshold: calc(0.5);
+  transition: shape-image-threshold 0.5s;
+  cursor: pointer;
+  transform: scale(1.1); /* Üzerine gelindiğinde %10 büyüt */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Üzerine gelindiğinde gölge ekle */
+  transition: transform 0.5s, box-shadow 0.5s; /* Geçiş efektini 0.5 saniye yap */
+  border-radius: 10px;
+}
+.border-top-dark1{
+    border-top: 1px solid rgba(120, 114, 114, 0.462);
+}
+.border-top-dark{
+  border-top: 1px solid rgba(230,230,230,1);
+}
