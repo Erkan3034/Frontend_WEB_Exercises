@@ -1,6 +1,6 @@
 # LinkedIn Clone
 
-This project is a LinkedIn clone built as part of the Patika Frontend Tutorials. It aims to replicate the core functionalities of LinkedIn using modern web development technologies.
+This project is a LinkedIn clone built as part of the Frontend Tutorials.
 
 
 ## Technologies Used
