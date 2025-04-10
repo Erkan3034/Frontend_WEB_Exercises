@@ -1,0 +1,90 @@
+body{
+    /*ortalama*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#game-board{
+    
+    /* 3 sütun ve 3 satırdan oluşan bir ızgara oluşturuyoruz */
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+}
+
+.cell {
+    background-color:wheat;
+    border-radius: 3%;
+    /* Hücre içeriğini ortalıyoruz */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Hücre boyutlarını ayarlıyoruz */
+    width: 100px;
+    height: 100px;
+    /* Hücre kenarlığını belirliyoruz */
+    border: 1px solid #000;
+    /* Yazı boyutunu ayarlıyoruz */
+    font-size: 24px;
+    /* Hücrelere tıklanabilirlik ekliyoruz */
+    cursor: pointer;
+}
+
+.cell:hover{
+    background: rgb(219, 185, 121);
+    border-radius: 8%;
+    transition-duration: 0.2s;
+}
+
+
+/* Skor alanının stilize edilmesi */
+#scoreboard {
+    display: block;
+    margin-bottom: 20px;
+}
+
+#scoreboard p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+#scoreboard span {
+    font-weight: bold;
+    font-size: 20px;
+    color: #ff0000;
+    transition: transform 0.3s ease;
+}
+
+/* Skor değişiminde animasyon */
+#scoreboard span.update {
+    transform: scale(1.5);
+}
+
+/* Yeniden başlatma butonu stilize edilmesi */
+#restart-button {
+    background-color: antiquewhite;
+    border-radius: 5%;
+
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#restart-button:hover{
+    background-color: #caffa5;
+}
+
+h1{
+    color: rgb(77, 59, 37);
+    font-style: italic;
+}

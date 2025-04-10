@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sum app with HTML Js</title>
+</head>
+<body>
+    <div class="calculator">
+
+        <input type="text" id="result" readonly> <!-- Result alanı-->
+
+        <div class="inputs"> <!-- İnput alanı-->
+            <input type="tel" id="num1"> 
+            <select name="operations" id="operation">
+                <option value="+">+</option>
+                <option value="*">*</option>
+                <option value="-">-</option>
+                <option value="/-">/</option>
+            </select>
+            <input type="tel" id="num2">
+        </div>
+
+
+        <button onclick="calculate()">Hesapla</button>
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

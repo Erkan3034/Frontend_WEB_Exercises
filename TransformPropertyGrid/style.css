@@ -1,0 +1,22 @@
+.wth{
+    width:10% !important;
+    background: red !important;
+}
+.k1:hover{
+    transform: rotate(20deg);
+    transition-duration:.5s
+}
+.k2:hover{
+    transform: scale(0.8);
+    transition-duration:.5s
+}
+.k3:hover{
+    transform: rotate(20deg);
+    transition-duration:.5s
+}.k4:hover{
+    transform: rotate(20deg);
+    transition-duration:.5s
+}.k5:hover{
+    transform: rotate(20deg);
+    transition-duration:.5s
+}
