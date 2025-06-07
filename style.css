@@ -1,112 +1,218 @@
 /* Import Google font - Poppins */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
-body{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background: #927DFC;
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #927DFC 0%, #5B5B5B 100%);
 }
-.wrapper{
-  width: 450px;
-  height: 288px;
-  padding: 30px;
-  background: #fff;
-  border-radius: 9px;
-  transition: height 0.2s ease;
+
+.wrapper {
+    width: 100%;
+    max-width: 450px;
+    min-height: 288px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(80, 80, 120, 0.18);
+    transition: height 0.2s ease;
+    margin-bottom: 24px;
 }
-.wrapper.active{
-  height: 537px;
+
+.wrapper.active {
+    height: 537px;
 }
-.wrapper .upload-box{
-  height: 225px;
-  display: flex;
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  border-radius: 5px;
-  border: 2px dashed #afafaf;
+
+.wrapper .upload-box {
+    height: 225px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 2px dashed #927DFC;
+    transition: border 0.2s;
 }
-.wrapper.active .upload-box{
-  border: none;
+
+.wrapper.active .upload-box {
+    border: none;
 }
-.upload-box p{
-  font-size: 1.06rem;
-  margin-top: 20px;
+
+.upload-box:hover {
+    border: 2px solid #927DFC;
+    background: #f0f0ff;
 }
-.wrapper.active .upload-box p{
-  display: none;
+
+.upload-box p {
+    font-size: 1.06rem;
+    margin-top: 20px;
 }
-.wrapper.active .upload-box img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 5px;
+
+.wrapper.active .upload-box p {
+    display: none;
 }
-.wrapper .content{
-  opacity: 0;
-  margin-top: 28px;
-  pointer-events: none;
+
+.wrapper.active .upload-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
 }
-.wrapper.active .content{
-  opacity: 1;
-  pointer-events: auto;
-  transition: opacity 0.5s 0.05s ease;
+
+.upload-box img {
+    filter: drop-shadow(0 2px 8px #927DFC33);
 }
-.content .row{
-  display: flex;
-  justify-content: space-between;
+
+.wrapper .content {
+    opacity: 0;
+    margin-top: 28px;
+    pointer-events: none;
 }
-.content .row .column{
-  width: calc(100% / 2 - 15px);
+
+.wrapper.active .content {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s 0.05s ease;
 }
-.row .column label{
-  font-size: 1.06rem;
+
+.content .row {
+    display: flex;
+    justify-content: space-between;
 }
-.sizes .column input{
-  width: 100%;
-  height: 49px;
-  outline: none;
-  margin-top: 7px;
-  padding: 0 15px;
-  font-size: 1.06rem;
-  border-radius: 4px;
-  border: 1px solid #aaa;
+
+.content .row .column {
+    width: calc(100% / 2 - 15px);
 }
-.sizes .column input:focus{
-  padding: 0 14px;
-  border: 2px solid #927DFC;
+
+.row .column label {
+    font-size: 1.06rem;
 }
-.content .checkboxes{
-  margin-top: 20px;
+
+.sizes .column input {
+    width: 100%;
+    height: 49px;
+    outline: none;
+    margin-top: 7px;
+    padding: 0 15px;
+    font-size: 1.06rem;
+    border-radius: 4px;
+    border: 1px solid #aaa;
 }
-.checkboxes .column{
-  display: flex;
-  align-items: center;
+
+.sizes .column input:focus {
+    padding: 0 14px;
+    border: 2px solid #927DFC;
 }
-.checkboxes .column input{
-  width: 17px;
-  height: 17px;
-  margin-right: 9px;
-  accent-color: #927DFC;
+
+.content .checkboxes {
+    margin-top: 20px;
 }
-.content .download-btn{
-  width: 100%;
-  color: #fff;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  font-size: 1.06rem;
-  border-radius: 5px;
-  padding: 15px 0;
-  margin: 30px 0 10px;
-  background: #927DFC;
-  text-transform: uppercase;
+
+.checkboxes .column {
+    display: flex;
+    align-items: center;
+}
+
+.checkboxes .column input {
+    width: 17px;
+    height: 17px;
+    margin-right: 9px;
+    accent-color: #927DFC;
+}
+
+.content .download-btn {
+    width: 100%;
+    color: #fff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.06rem;
+    border-radius: 5px;
+    padding: 15px 0;
+    margin: 30px 0 10px;
+    background: linear-gradient(90deg, #927DFC 60%, #3a2e7c 100%);
+    text-transform: uppercase;
+    box-shadow: 0 2px 8px 0 #927DFC44;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+.content .download-btn:hover {
+    background: linear-gradient(90deg, #3a2e7c 0%, #927DFC 100%);
+    box-shadow: 0 4px 16px 0 #927DFC55;
+}
+
+.main-header {
+    width: 100%;
+    padding: 40px 0 20px 0;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 4px 24px 0 rgba(80, 80, 120, 0.08);
+    margin-bottom: 24px;
+}
+
+.main-header h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #3a2e7c;
+}
+
+.main-header .brand {
+    color: #927DFC;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.main-header .by {
+    color: #222;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-left: 12px;
+    font-style: italic;
+}
+
+.main-footer {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 16px 0 8px 0;
+    background: rgba(255, 255, 255, 0.85);
+    font-size: 1.05rem;
+    color: #3a2e7c;
+    letter-spacing: 1px;
+    box-shadow: 0 -2px 16px 0 rgba(80, 80, 120, 0.08);
+    border-radius: 0 0 16px 16px;
+}
+
+.main-footer b {
+    color: #927DFC;
+    font-weight: 700;
+}
+
+
+/* Responsive */
+
+@media (max-width: 600px) {
+    .wrapper,
+    .main-footer {
+        padding: 12px;
+        min-width: unset;
+        width: 98vw;
+        max-width: 98vw;
+    }
+    .main-header h1 {
+        font-size: 1.3rem;
+    }
 }
